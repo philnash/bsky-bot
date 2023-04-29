@@ -1,0 +1,26 @@
+{
+  "name": "bsky-bot",
+  "version": "1.0.0",
+  "description": "A template repo for building Bluesky bots",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bsky",
+    "bluesky",
+    "atproto",
+    "bot"
+  ],
+  "author": "Phil Nash",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.16.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "typescript": "^5.0.4"
+  }
+}
