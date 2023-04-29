@@ -5,7 +5,10 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "build": "tsc",
+    "start": "node ."
   },
   "keywords": [
     "bsky",
@@ -13,7 +16,11 @@
     "atproto",
     "bot"
   ],
-  "author": "Phil Nash",
+  "author": {
+    "name": "Phil Nash",
+    "email": "philnash@gmail.com",
+    "url": "https://philna.sh/"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.16.2",
