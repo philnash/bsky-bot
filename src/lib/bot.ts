@@ -11,13 +11,14 @@ type BotOptions = {
   service: string | URL;
   dryRun: boolean;
 };
-const defaultOptions: BotOptions = {
-  service: bskyService,
-  dryRun: false,
-} as const;
 
 export default class Bot {
   #agent;
+
+  static defaultOptions: BotOptions = {
+    service: bskyService,
+    dryRun: false,
+  } as const;
 
   constructor(service: AtpAgentOpts["service"]) {
     this.#agent = new BskyAgent({ service });
@@ -51,8 +52,8 @@ export default class Bot {
     botOptions?: Partial<BotOptions>
   ) {
     const { service, dryRun } = botOptions
-      ? Object.assign({}, defaultOptions, botOptions)
-      : defaultOptions;
+      ? Object.assign({}, this.defaultOptions, botOptions)
+      : this.defaultOptions;
     const bot = new Bot(service);
     await bot.login(bskyAccount);
     const text = await getPostText();
