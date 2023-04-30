@@ -6,9 +6,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
+    "lint": "eslint src/",
     "build": "tsc",
-    "start": "node ."
+    "watch": "tsc --watch",
+    "start": "node .",
+    "dev": "nodenv ."
   },
   "keywords": [
     "bsky",
@@ -28,6 +30,11 @@
     "@typescript-eslint/parser": "^5.59.1",
     "eslint": "^8.39.0",
     "eslint-plugin-sonarjs": "^0.19.0",
+    "node-env-run": "^4.0.2",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.2.11",
+    "zod": "^3.21.4"
   }
 }
