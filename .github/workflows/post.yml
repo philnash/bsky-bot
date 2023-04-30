@@ -16,4 +16,9 @@ jobs:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
       - run: npm ci
       - run: npm run build
-      - run: npm start
+      - name: Send post
+        run: npm start
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+          BSKY_SERVICE: ${{ secrets.BSKY_SERVICE }}
