@@ -21,7 +21,7 @@ This is a template repo for building [Bluesky](https://bsky.app/) bots that post
 
 #### A Bluesky account
 
-To use this repo you will need a [Bluesky account](https://bsky.app/). Currently Bluesky is invite only and you can [sign up for an invite here](https://bsky.app/).
+To use this repo you will need a [Bluesky account](https://bsky.app/). [Sign up for an invite here](https://bsky.app/).
 
 Once you have an account for your bot, you will need to know your bot's handle and password (I recommend using an App Password, which you can create under your account's settings).
 
