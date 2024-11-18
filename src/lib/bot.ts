@@ -1,11 +1,10 @@
 import { bskyAccount, bskyService } from "./config.js";
 import type {
   AtpAgentLoginOpts,
-  AtpAgentOpts,
+  AtpAgentOptions,
   AppBskyFeedPost,
 } from "@atproto/api";
-import atproto from "@atproto/api";
-const { BskyAgent, RichText } = atproto;
+import { AtpAgent, RichText } from '@atproto/api';
 
 type BotOptions = {
   service: string | URL;
@@ -20,8 +19,8 @@ export default class Bot {
     dryRun: false,
   } as const;
 
-  constructor(service: AtpAgentOpts["service"]) {
-    this.#agent = new BskyAgent({ service });
+  constructor(service: AtpAgentOptions["service"]) {
+    this.#agent = new AtpAgent({ service });
   }
 
   login(loginOpts: AtpAgentLoginOpts) {
