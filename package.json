@@ -25,13 +25,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.15.0",
     "@types/node": "^22.9.3",
-    "@typescript-eslint/eslint-plugin": "^5.59.1",
-    "@typescript-eslint/parser": "^5.59.1",
-    "eslint": "^8.39.0",
-    "eslint-plugin-sonarjs": "^0.19.0",
+    "eslint": "^9.15.0",
     "node-env-run": "^4.0.2",
-    "typescript": "^5.0.4"
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.15.0"
   },
   "dependencies": {
     "@atproto/api": "^0.13.18",
