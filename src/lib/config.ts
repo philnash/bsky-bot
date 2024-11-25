@@ -3,9 +3,9 @@ import { z } from "zod";
 import type { AtpAgentLoginOpts } from "@atproto/api";
 
 const envSchema = z.object({
-  BSKY_HANDLE: z.string().nonempty(),
-  BSKY_PASSWORD: z.string().nonempty(),
-  BSKY_SERVICE: z.string().nonempty().default("https://bsky.social"),
+  BSKY_HANDLE: z.string().min(1),
+  BSKY_PASSWORD: z.string().min(1),
+  BSKY_SERVICE: z.string().min(1).default("https://bsky.social"),
 });
 
 const parsed = envSchema.parse(env);
